@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Time Metronome</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Resetting default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styles */
+        body {
+            font-family: Arial, sans-serif;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            line-height: 1.8;
+            font-size: 22px; /* Increased font size */
+        }
+
+        /* Header styles */
+        header {
+            width: 100%;
+            text-align: center;
+            background-color: #007bff;
+            padding: 40px;
+            color: #fff;
+            font-size: 32px; /* Increased font size */
+            font-weight: bold;
+        }
+
+        /* Main container styles */
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+            margin: 20px auto;
+            background-color: rgba(248, 249, 250, 0.95); /* Reduced transparency */
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* About section styles */
+        .about-section {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .about-section header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .about-content {
+            text-align: justify;
+            font-size: 1.5rem; /* Increased font size */
+        }
+
+        .about-content p, .about-content ul {
+            margin-bottom: 15px;
+        }
+
+        .about-content ul {
+            list-style-type: disc;
+            padding-left: 25px;
+        }
+
+        /* Side menu styles */
+        .side-menu {
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: rgba(248, 249, 250, 0.95); /* Reduced transparency */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .side-menu a {
+            margin: 15px 0;
+            padding: 15px;
+            background-color: #007bff;
+            border: none;
+            cursor: pointer;
+            color: #fff;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            font-size: 20px; /* Increased font size */
+        }
+
+        .side-menu a:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer styles */
+        footer {
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            background-color: rgba(248, 249, 250, 0.95); /* Reduced transparency */
+            border-top: 1px solid #ccc;
+        }
+
+        footer button {
+            margin: 0 10px;
+            padding: 15px 25px;
+            background-color: #007bff;
+            border: none;
+            cursor: pointer;
+            color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-size: 20px; /* Increased font size */
+        }
+
+        footer button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Popup styles */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 35px;
+            border-radius: 10px;
+            z-index: 9999;
+            text-align: center;
+            font-size: 1.7em; /* Increased font size */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Time Metronome</h1>
+    </header>
+    <div class="main-container">
+        <section class="about-section">
+            <header>
+                <h2>About This Website</h2>
+            </header>
+            <div class="about-content">
+                <p>Welcome to <strong>Time Metronome</strong>, your go-to tool for managing your time effectively. Our website features a versatile timer that helps you stay on track with your tasks and take breaks efficiently. Whether you are studying, working, or simply browsing social media, Time Metronome ensures you utilize your time wisely.</p>
+                <p>Key Features:</p>
+                <ul>
+                    <li><strong>Timer:</strong> Start, stop, and reset the timer to keep track of your tasks. The timer will redirect you back to the homepage after a set duration, ensuring you stay focused.</li>
+                    <li><strong>Social Media Integration:</strong> Quickly access popular social media platforms like WhatsApp, Facebook, Instagram, and YouTube directly from our website. Each session is timed to help you manage your social media usage.</li>
+                    <li><strong>User-Friendly Design:</strong> Our website is designed with a clean and formal layout, making it easy to navigate and use.</li>
+                </ul>
+                <p>We hope you find Time Metronome helpful in managing your time and enhancing your productivity. For any feedback or support, feel free to contact us.</p>
+            </div>
+        </section>
+        <nav class="side-menu">
+            <a href="index.html" aria-label="Home">HOME</a>
+        </nav>
+    </div>
+    <div class="popup" id="popup">
+        <p>This is an example popup message!</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+    <script>
+        // JavaScript for Popup Functionality
+        function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            setTimeout(showPopup, 2000); // Show popup after 2 seconds
+        });
+    </script>
+</body>
+</html>

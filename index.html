@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Metronome</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .focus-mode-button {
+            background-color: #007bff; /* Blue color */
+            color: white;
+        }
+        .focus-mode-button.active {
+            background-color: #28a745; /* Green color */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="logo.jpg" alt="Logo">
+            <h1>TIME METRONOME</h1>
+            <nav class="header-buttons">
+                <button id="homeButton" class="about-btn" onclick="redirectToHomePage()">Home</button>
+                <button id="focusModeButton" class="about-btn focus-mode-button" onclick="toggleFocusMode()">Focus Mode</button>
+                <button class="about-btn" onclick="redirectToAboutPage()">About</button>
+                <button class="about-btn" onclick="redirectToContactPage()">Contact Us</button>
+            </nav>
+        </div>
+    </header>
+    <div class="main-container">
+        <section class="timer-section">
+            <header>
+                <h2>Timer</h2>
+            </header>
+            <div class="timer-box">
+                <div class="timer">00:00</div>
+            </div>
+        </section>
+        <nav class="side-menu">
+            <header>
+                <h2>Select Application</h2>
+            </header>
+        </nav>
+        <section class="content">
+            <div class="apps-section">
+                <a href="https://poki.com/" target="_blank" onclick="redirect()" class="app"><img src="poki.png" alt="Poki"></a>
+                <a href="https://www.facebook.com" target="_blank" onclick="redirect()" class="app"><img src="facebook.jpg" alt="Facebook"></a>
+                <a href="https://www.instagram.com" target="_blank" onclick="redirect()" class="app"><img src="instagram.jpg" alt="Instagram"></a>
+                <a href="https://www.youtube.com" target="_blank" onclick="redirect()" class="app"><img src="youtube.jpg" alt="YouTube"></a>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="footer-description">
+            <p>Welcome to Time Metronome Website - Your one-stop addiction sense.</p>
+            <p>Is parental control really essential? Yes! It is very important to monitor your children's web activities from time to time. Therefore, our website is the best spot to regularly know how much time you or your children are spending on applications.</p>
+            <p>Why use our website? First, Time Metronome lets you know how much time you or your child has spent on a particular app. And after a set timer is reached, our software is programmed in such a way that the current viewing application is exited from itself. Second, it's completely free! Start using this website and know and control your addiction!</p>
+        </div>
+        <button class="about-btn" onclick="redirectToAboutPage()">About</button>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
